@@ -187,7 +187,7 @@ body#bg-img::after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: rgba(68, 68, 68, 0.9);
+  background-color: rgba(68, 68, 68, 0.6);
 }
 
 h1,
@@ -302,6 +302,15 @@ main#home h1 {
   background: #515151;
   padding: 0.5rem;
   border-bottom: 5px solid #eece1a;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.about-info .job:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border: 5px solid #eece1a;
 }
 
 .projects {

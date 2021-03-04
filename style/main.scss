@@ -113,6 +113,13 @@ main {
         background: lighten($primary-color,5);
         padding: 0.5rem;
         border-bottom: 5px solid $secondary-color;
+        @include easeOut;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+            border: 5px solid $secondary-color;
+        }
     }
 }
 
