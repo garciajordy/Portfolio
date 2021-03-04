@@ -126,6 +126,7 @@ main {
 
     img {
         width: 100%;
+        height: 200px;
         border: #fff solid 3px;
 
         &:hover {
@@ -155,6 +156,7 @@ main {
             padding: 0.5rem 1.5rem;
             background: $secondary-color;
             color: set-text-color($secondary-color);
+            cursor: pointer;
             
             span {
                 color: set-text-color($secondary-color);

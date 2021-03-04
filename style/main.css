@@ -314,6 +314,7 @@ main#home h1 {
 
 .projects img {
   width: 100%;
+  height: 200px;
   border: #fff solid 3px;
 }
 
@@ -352,6 +353,7 @@ main#home h1 {
   padding: 0.5rem 1.5rem;
   background: #eece1a;
   color: #000;
+  cursor: pointer;
 }
 
 .boxes div:hover span {
