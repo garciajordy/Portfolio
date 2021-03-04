@@ -1,53 +1,39 @@
-![](https://img.shields.io/badge/myapp-blueviolet)
 
-# Project Name
+# My Portfolio
 
-> One paragraph statement about the project.
+> Created my portfolio completely using SASS
 
-![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+| ![screenshot](assets/background.PNG)
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML5, CSS3, Javascript
+- SASS
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://garciajordy.github.io/NewsWeek-Project/)
 
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
+## Instructions
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
 ### Setup
+- Clone in the terminal or download this entire [GitHub Repo](https://github.com/garciajordy/NewsWeek-Project) and go to the index.html file.
 
 ### Install
+- Set up liveserver as an extension in your VS Code.
+- If you dont have the live server extension, or are using another software just view directly in your browser.
 
 ### Usage
+- Right click and open the index.html in your browser to view.
 
-### Run tests
+## Author
 
-### Deployment
+👤 **Jordy Garcia**
 
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/garciajordy)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jordy-garcia-675849206/)
 
 ## 🤝 Contributing
 
@@ -57,14 +43,12 @@ Feel free to check the [issues page](issues/).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give a ⭐ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
 - Inspiration
-- etc
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](./LICENSE) licensed.
