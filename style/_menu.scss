@@ -1,133 +1,141 @@
 // Menu Buttons
 
 .menu-btn {
-    position: absolute;
-    z-index: 3;
-    top: 35px;
-    right: 35px;
-    cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  top: 35px;
+  right: 35px;
+  cursor: pointer;
+
+  @include easeOut;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: set-text-color($primary-color);
+
     @include easeOut;
+  }
 
-        .btn-line {
-            width: 28px;
-            height: 3px;
-            margin: 0 0 5px 0;
-            background: set-text-color($primary-color);
-            @include easeOut;
-        }
+  // Rotate Into X With Menu Lines
 
-        // Rotate Into X With Menu Lines
+  &.close {
+    transform: rotate(180deg);
 
-        &.close {
-            transform: rotate(180deg);
+    .btn-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
 
-            .btn-line {
-                &:nth-child(1) {
-                    transform: rotate(45deg) translate(5px, 5px);
-                }
+      &:nth-child(2) {
+        opacity: 0;
+      }
 
-                &:nth-child(2) {
-                    opacity: 0;
-                }
-
-                &:nth-child(3) {
-                    transform: rotate(-45deg) translate(7px, -6px);
-                }
-            }
-        }
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
 }
 
 // Menu Overlay
 
 .menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    opacity: 0.9;
-    visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+
+    @include easeOut;
 
     &.show {
-        visibility: visible;
+      // Slide In From Top
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  // Branding Side
+  &-branding {
+    background: $primary-color;
+    transform: translate3d(0, 100%, 0);
+
+    @include easeOut;
+
+    &.show {
+      // Slide In From Top
+      transform: translate3d(0, 0, 0);
     }
 
-    &-branding,
-    &-nav {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
-        float: left;
-        width: 50%;
-        height: 100vh;
-        overflow: hidden;
+    .portrait {
+      height: 250px;
+      width: 200px;
+      background: url("../assets/pasfotoformaat.jpg");
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
+      background-size: 100% 100%;
     }
-    &-nav {
-        margin: 0;
-        padding: 0;
-        background: darken($primary-color,5);
-        list-style: none;
-        transform: translate3d(0, -100%, 0);
-        @include easeOut;
+  }
 
-        &.show {
-            // Slide In From Top
-            transform: translate3d(0, 0, 0);
-        }
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+
+    @include easeOut;
+
+    &.show {
+      // Slide In From Right
+      transform: translate3d(0, 0, 0);
     }
-    // Branding Side 
-    &-branding {
-        background: $primary-color;
-        transform: translate3d(0, 100%, 0);
-        @include easeOut;
 
-        &.show {
-            // Slide In From Top
-            transform: translate3d(0, 0, 0);
-        }
-
-        .portrait {
-            height: 250px;
-            width: 200px;
-            background: url("../assets/pasfotoformaat.jpg");
-            border-radius: 50%;
-            border: solid 3px $secondary-color;
-            background-size: 100% 100%;
-            
-        }
-
+    &.current > a {
+      color: $secondary-color;
     }
-    .nav-item {
-        transform: translate3d(600px, 0, 0);
-        @include easeOut;
+  }
 
-        &.show {
-            // Slide In From Right
-            transform: translate3d(0, 0, 0);
-        }
-        &.current > a {
-            color: $secondary-color;
-        }
-    }
-    .nav-link {
-        display: inline-block;
-        position: relative;
-        font-size: 30px;
-        text-transform: uppercase;
-        padding: 1rem 0;
-        font-weight: 300;
-        color: set-text-color($primary-color);
-        text-decoration: none;
-        @include easeOut;
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: set-text-color($primary-color);
+    text-decoration: none;
 
-        &:hover {
-            color: $secondary-color;
-        }
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
     }
+  }
 }
 
 // Delay Each Nav-item Slide By 0.1s
 @for $x from 1 through 4 {
-    .nav-item:nth-child(#{$x}) {
-        transition-delay: $x * 0.1s;
-    }
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
 }

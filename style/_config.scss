@@ -5,64 +5,59 @@ $home-image: url(../assets/background.jpg);
 $background-opacity: 0.6;
 
 @mixin background {
-    @if $show-home-images {
-        &#bg-img {
-            background: $home-image;
-            background-attachment: fixed;
-            background-size: cover;
-           
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                background-color: rgba($primary-color, $background-opacity);
-            }
-        }
+  @if $show-home-images {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: rgba($primary-color, $background-opacity);
+      }
     }
+  }
 }
 
 @mixin easeOut {
-    transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
-// Set Text Color 
+// Set Text Color
 @function set-text-color($color) {
-    @if (lightness($color) > 40 ) {
-        @return #000;
-    } @else {
-        @return #fff;
-    }
+  @if (lightness($color) > 40 ) {
+    @return #000;
+  }
+
+  @else {
+    @return #fff;
+  }
 }
 
 // Media Query Mixins
 
 @mixin mediaSm {
-    @media screen and (max-width: 500px) {
-        @content
-    }
-};
-
+  @media screen and (max-width: 500px) {
+    @content; }
+}
 
 @mixin mediaMd {
-    @media screen and (max-width: 768px) {
-        @content
-    }
-};
-
+  @media screen and (max-width: 768px) {
+    @content; }
+}
 
 @mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
-        @content
-    }
-};
-
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content; }
+}
 
 @mixin mediaXl {
-    @media screen and (min-width: 1171px) {
-        @content
-    }
-};
+  @media screen and (min-width: 1171px) {
+    @content; }
+}
