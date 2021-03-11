@@ -13,13 +13,13 @@
 
 ## Live Demo
 
-[Live Demo Link](https://garciajordy.github.io/NewsWeek-Project/)
+[Live Demo Link](https://garciajordy.github.io/Portfolio/)
 
 ## Instructions
 To get a local copy up and running follow these simple example steps.
 
 ### Setup
-- Clone in the terminal or download this entire [GitHub Repo](https://github.com/garciajordy/NewsWeek-Project) and go to the index.html file.
+- Clone in the terminal or download this entire [GitHub Repo](https://github.com/garciajordy/Portfolio) and go to the index.html file.
 
 ### Install
 - Set up liveserver as an extension in your VS Code.
